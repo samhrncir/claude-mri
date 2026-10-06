@@ -1,0 +1,25 @@
+ecc 2.2.3
+  Description: Harness-native ECC operator layer - 68 agents, 293 skills, 94 legacy command shims, reusable hooks, rules, selective install profiles, and production-ready workflows for Claude Code, Codex, OpenCode, Cursor, and related agent harnesses
+  Source: ecc@ecc
+
+Component inventory
+  Skills (387)  accessibility, agent-architecture-audit, agent-eval, aside, ecc-guide, ecc-guide, tdd-workflow, token-budget-advisor
+  Agents (68)  a11y-architect, agent-evaluator, architect, build-error-resolver
+  Hooks (7)  PreToolUse, PreCompact, SessionStart, PostToolUse, PostToolUseFailure, Stop, SessionEnd  (harness-only — no model context cost)
+  MCP servers (1)  chrome-devtools  (tool schemas resolved at runtime; not counted)
+  LSP servers (0)
+
+Projected token cost
+  Always-on:   ~44,834 tok   added to every session
+
+Per-component (rounded)
+  component                               always-on  on-invoke
+  accessibility                                ~130      ~2.4k
+  agent-architecture-audit                     ~180      ~3.7k
+  agent-eval                                   ~110      ~1.5k
+  aside                                         ~60       ~410
+  ecc-guide                                    ~140      ~2.1k
+  ecc-guide                                    ~140      ~2.1k
+  tdd-workflow                                 ~200        ~4k
+  token-budget-advisor                         ~170        ~2k
+  not-in-files                                  ~50       ~900

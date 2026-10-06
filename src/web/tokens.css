@@ -1,0 +1,134 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --surface-3: #e4e8ee;
+  --canvas: #f2f4f7;
+  --canvas-dot: #c9d0da;
+  --canvas-mask: rgba(246, 247, 249, 0.7);
+  --fg: #1b2129;
+  --muted: #5b6675;
+  --faint: #8b95a3;
+  --fg-inverse: #ffffff;
+  --border: #d7dde5;
+  --border-strong: #b9c2ce;
+  --accent: #2f6fdc;
+  --accent-strong: #1f5bc4;
+  --warn: #b7791f;
+  --danger: #c93c37;
+  --ok: #15803d;
+  --k-instructions: #b7791f;
+  --k-settings: #2f6fdc;
+  --k-hooks: #7c3aed;
+  --k-mcp: #0f9488;
+  --k-plugins: #15803d;
+  --k-skills: #4f46e5;
+  --k-memory: #be3a7c;
+  --k-sessions: #6b7482;
+  --k-cloud: #0284c7;
+  --k-scope: #64748b;
+  --k-state: #8b95a3;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-3: 0 16px 40px rgba(0, 0, 0, 0.16);
+  --z-panels: 5;
+  --z-rail: 10;
+  --z-inspector: 10;
+  --z-toast: 20;
+  --z-modal: 30;
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-slow: 320ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, 'Cascadia Mono', 'SF Mono', monospace;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0e1116;
+  --surface: #161b22;
+  --surface-2: #1d242e;
+  --surface-3: #232c38;
+  --canvas: #0b0e13;
+  --canvas-dot: #283040;
+  --canvas-mask: rgba(14, 17, 22, 0.7);
+  --fg: #e6e9ee;
+  --muted: #8b95a3;
+  --faint: #5c6673;
+  --fg-inverse: #0e1116;
+  --border: #2a323d;
+  --border-strong: #3b4654;
+  --accent: #4f9cf9;
+  --accent-strong: #2f7fe0;
+  --warn: #f5a524;
+  --danger: #e5534b;
+  --ok: #3fb950;
+  --k-instructions: #e3a53a;
+  --k-settings: #7aa2f7;
+  --k-hooks: #b084f5;
+  --k-mcp: #2dd4bf;
+  --k-plugins: #4ade80;
+  --k-skills: #818cf8;
+  --k-memory: #f472b6;
+  --k-sessions: #9aa4b2;
+  --k-cloud: #38bdf8;
+  --k-scope: #8b95a3;
+  --k-state: #6b7482;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 18px 48px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #0e1116;
+    --surface: #161b22;
+    --surface-2: #1d242e;
+    --surface-3: #232c38;
+    --canvas: #0b0e13;
+    --canvas-dot: #283040;
+    --canvas-mask: rgba(14, 17, 22, 0.7);
+    --fg: #e6e9ee;
+    --muted: #8b95a3;
+    --faint: #5c6673;
+    --fg-inverse: #0e1116;
+    --border: #2a323d;
+    --border-strong: #3b4654;
+    --accent: #4f9cf9;
+    --accent-strong: #2f7fe0;
+    --warn: #f5a524;
+    --danger: #e5534b;
+    --ok: #3fb950;
+    --k-instructions: #e3a53a;
+    --k-settings: #7aa2f7;
+    --k-hooks: #b084f5;
+    --k-mcp: #2dd4bf;
+    --k-plugins: #4ade80;
+    --k-skills: #818cf8;
+    --k-memory: #f472b6;
+    --k-sessions: #9aa4b2;
+    --k-cloud: #38bdf8;
+    --k-scope: #8b95a3;
+    --k-state: #6b7482;
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-2: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-3: 0 18px 48px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+  .edge--animated {
+    animation: none !important;
+  }
+}

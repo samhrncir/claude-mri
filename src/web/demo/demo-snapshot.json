@@ -1,0 +1,2639 @@
+{
+ "schemaVersion": 1,
+ "meta": {
+  "toolVersion": "demo",
+  "snapshotId": "demo-snapshot",
+  "scannedAt": "2026-10-05T12:00:00.000Z",
+  "durationMs": 42,
+  "platform": "linux",
+  "homeDir": "~",
+  "configDir": "~/.claude",
+  "configDirOverridden": false,
+  "claudeJsonPath": "~/.claude.json",
+  "cliAvailable": false,
+  "roots": [],
+  "mode": "shared",
+  "redaction": "export",
+  "probes": {
+   "managedSettings": [
+    {
+     "path": "C:/Users/Sam/AppData/Local/Temp/claude-mri-demo-fVBes9/sys/etc/claude-code/managed-settings.json",
+     "exists": false
+    }
+   ],
+   "claudeDesktop": {
+    "path": "C:/Users/Sam/AppData/Local/Temp/claude-mri-demo-fVBes9/xdg/Claude/claude_desktop_config.json",
+    "exists": false
+   }
+  },
+  "counts": {
+   "nodesByKind": {
+    "agent": 2,
+    "claudeJson": 1,
+    "claudeMd": 4,
+    "cloudConnectors": 1,
+    "connector": 1,
+    "credentials": 1,
+    "hook": 2,
+    "hookEvent": 2,
+    "hookGroup": 2,
+    "hooksFile": 1,
+    "importedDoc": 2,
+    "machine": 1,
+    "marketplace": 1,
+    "mcpServer": 3,
+    "memoryFile": 1,
+    "memoryIndex": 1,
+    "permissionRule": 6,
+    "plan": 1,
+    "plugin": 1,
+    "pluginManifest": 1,
+    "pluginRegistry": 1,
+    "project": 1,
+    "projectState": 1,
+    "session": 2,
+    "settings": 3,
+    "skill": 4,
+    "tool": 27,
+    "toolset": 1,
+    "userScope": 1
+   },
+   "edgesByKind": {
+    "allows": 5,
+    "approves": 1,
+    "contains": 75,
+    "denies": 1,
+    "enables": 1,
+    "imports": 2,
+    "installedFrom": 1,
+    "loadsAtStartup": 1,
+    "loadsLazily": 1,
+    "matches": 6,
+    "overrides": 2,
+    "recordsUsage": 1,
+    "remembers": 1,
+    "surfacesAs": 4,
+    "triggers": 2
+   },
+   "filesInlined": 16
+  },
+  "layersPresent": [
+   "config",
+   "state",
+   "memory",
+   "plans",
+   "sessions"
+  ]
+ },
+ "nodes": [
+  {
+   "id": "agent:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "kind": "agent",
+   "label": "reviewer",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "summary": "A careful code reviewer. Subagent provided by a plugin, limited to 3 tools, model sonnet; Claude delegates to it in a separate context.",
+   "data": {
+    "name": "reviewer",
+    "description": "A careful code reviewer.",
+    "origin": "plugin",
+    "pluginId": "code-review@anthropic-marketplace",
+    "tools": [
+     "Read",
+     "Grep",
+     "Glob"
+    ],
+    "model": "sonnet",
+    "frontmatter": {
+     "name": "reviewer",
+     "description": "A careful code reviewer.",
+     "tools": "Read, Grep, Glob",
+     "model": "sonnet"
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 117,
+    "lines": 8
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "agent:~/projects/my-app/.claude/agents/tester.md",
+   "kind": "agent",
+   "label": "tester",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/.claude/agents/tester.md",
+   "fileId": "~/projects/my-app/.claude/agents/tester.md",
+   "summary": "Writes and runs tests. Subagent project-level (this repository only), with all tools; Claude delegates to it in a separate context.",
+   "data": {
+    "name": "tester",
+    "description": "Writes and runs tests.",
+    "origin": "project",
+    "frontmatter": {
+     "name": "tester",
+     "description": "Writes and runs tests."
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 57,
+    "lines": 5
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "claudeJson:~/.claude.json",
+   "kind": "claudeJson",
+   "label": ".claude.json",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude.json",
+   "fileId": "~/.claude.json",
+   "summary": "Claude Code's state file (not settings.json): 1 project entries, 1 user-scope MCP server, 1 claude.ai connector, plus usage counters. Account details inside are never read by claude-mri.",
+   "data": {
+    "keyCount": 4,
+    "extractedKeys": [
+     "projects",
+     "mcpServers",
+     "claudeAiMcpEverConnected",
+     "pluginUsage"
+    ],
+    "projectCount": 1,
+    "userMcpServers": [
+     "filesystem"
+    ],
+    "connectors": [
+     "claude.ai Google Calendar"
+    ]
+   },
+   "stats": {
+    "sizeBytes": 902
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "claudeMd:C:/Users/Sam/.claude/CLAUDE.md",
+   "kind": "claudeMd",
+   "label": "CLAUDE.md",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "path": "C:/Users/Sam/.claude/CLAUDE.md",
+   "fileId": "C:/Users/Sam/.claude/CLAUDE.md",
+   "summary": "Instructions from a parent folder; Claude loads these too when it runs in a project below it. 23 lines.",
+   "data": {
+    "role": "parent",
+    "lines": 23,
+    "imports": [],
+    "isImportOnly": false
+   },
+   "stats": {
+    "sizeBytes": 819,
+    "lines": 23
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "claudeMd:~/.claude/CLAUDE.md",
+   "kind": "claudeMd",
+   "label": "CLAUDE.md (user)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude/CLAUDE.md",
+   "fileId": "~/.claude/CLAUDE.md",
+   "summary": "Your personal instructions, loaded at the start of every session in every project. 5 lines.",
+   "data": {
+    "role": "user",
+    "lines": 5,
+    "imports": [],
+    "isImportOnly": false
+   },
+   "stats": {
+    "sizeBytes": 61,
+    "lines": 5
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "claudeMd:~/projects/my-app/CLAUDE.md",
+   "kind": "claudeMd",
+   "label": "CLAUDE.md (project)",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/CLAUDE.md",
+   "fileId": "~/projects/my-app/CLAUDE.md",
+   "summary": "Project instructions shared with the team, loaded whenever Claude runs in this folder. This file only imports @AGENTS.md.",
+   "data": {
+    "role": "project",
+    "lines": 2,
+    "imports": [
+     {
+      "raw": "AGENTS.md",
+      "line": 1,
+      "resolved": "~/projects/my-app/AGENTS.md",
+      "missing": false,
+      "external": false
+     }
+    ],
+    "isImportOnly": true
+   },
+   "stats": {
+    "sizeBytes": 11,
+    "lines": 2
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "claudeMd:~/projects/my-app/src/api/CLAUDE.md",
+   "kind": "claudeMd",
+   "label": "CLAUDE.md",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/src/api/CLAUDE.md",
+   "fileId": "~/projects/my-app/src/api/CLAUDE.md",
+   "summary": "Instructions in a subfolder, loaded only when Claude reads files there. 4 lines.",
+   "data": {
+    "role": "nested",
+    "lines": 4,
+    "imports": [],
+    "isImportOnly": false
+   },
+   "stats": {
+    "sizeBytes": 41,
+    "lines": 4
+   },
+   "loadTiming": "lazy"
+  },
+  {
+   "id": "cloudConnectors:cloud#connectors",
+   "kind": "cloudConnectors",
+   "label": "claude.ai connectors",
+   "scope": "cloud",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "summary": "1 remote MCP connector linked to your claude.ai account. They have no local config file and are fetched at session start.",
+   "data": {
+    "count": 1,
+    "source": "claudeJson:~/.claude.json"
+   }
+  },
+  {
+   "id": "connector:cloud#Google_Calendar",
+   "kind": "connector",
+   "label": "Google Calendar",
+   "scope": "cloud",
+   "layer": "config",
+   "parentId": "cloudConnectors:cloud#connectors",
+   "summary": "Remote MCP connector from your claude.ai account; its tools appear as mcp__claude_ai_Google_Calendar__*.",
+   "data": {
+    "displayName": "claude.ai Google Calendar",
+    "toolPrefix": "mcp__claude_ai_Google_Calendar__"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "credentials:~/.claude/.credentials.json",
+   "kind": "credentials",
+   "label": ".credentials.json",
+   "scope": "user",
+   "layer": "state",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude/.credentials.json",
+   "summary": "Your sign-in tokens. claude-mri never opens this file; it only notes that it exists.",
+   "data": {
+    "exists": true
+   },
+   "stats": {
+    "sizeBytes": 54
+   },
+   "loadTiming": "never"
+  },
+  {
+   "id": "hook:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0/0",
+   "kind": "hook",
+   "label": "guard.js",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "summary": "Runs a command on PreToolUse when the tool name matches Bash.",
+   "data": {
+    "type": "command",
+    "command": "node scripts/guard.js"
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "kind": "hook",
+   "label": "npx prettier --write \"$FILE\"",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Runs a command on PostToolUse when the tool name matches Edit|Write (timeout 20s).",
+   "data": {
+    "type": "command",
+    "command": "npx prettier --write \"$FILE\"",
+    "timeout": 20
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hookEvent:machine#PostToolUse",
+   "kind": "hookEvent",
+   "label": "PostToolUse",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Lifecycle event fired around tool calls; hooks attach here with a tool-name matcher.",
+   "data": {
+    "event": "PostToolUse",
+    "known": true,
+    "toolEvent": true,
+    "groupCount": 1,
+    "sources": [
+     "settings:~/.claude/settings.json"
+    ]
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hookEvent:machine#PreToolUse",
+   "kind": "hookEvent",
+   "label": "PreToolUse",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Lifecycle event fired around tool calls; hooks attach here with a tool-name matcher.",
+   "data": {
+    "event": "PreToolUse",
+    "known": true,
+    "toolEvent": true,
+    "groupCount": 1,
+    "sources": [
+     "hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json"
+    ]
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0",
+   "kind": "hookGroup",
+   "label": "PreToolUse · Bash",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "summary": "1 hook run on PreToolUse when the tool name matches Bash.",
+   "data": {
+    "event": "PreToolUse",
+    "matcher": "Bash",
+    "matcherValid": true,
+    "hookCount": 1,
+    "sourceKind": "plugin",
+    "matchedTools": [
+     "Bash"
+    ]
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0",
+   "kind": "hookGroup",
+   "label": "PostToolUse · Edit|Write",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "settings:~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "1 hook run on PostToolUse when the tool name matches Edit|Write.",
+   "data": {
+    "event": "PostToolUse",
+    "matcher": "Edit|Write",
+    "matcherValid": true,
+    "hookCount": 1,
+    "sourceKind": "settings",
+    "matchedTools": [
+     "Edit",
+     "Write",
+     "MultiEdit",
+     "NotebookEdit",
+     "TodoWrite"
+    ]
+   },
+   "loadTiming": "onEvent"
+  },
+  {
+   "id": "hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "kind": "hooksFile",
+   "label": "hooks.json",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "summary": "1 hook in 1 matcher group across PreToolUse; active whenever the plugin is enabled.",
+   "data": {
+    "events": [
+     "PreToolUse"
+    ],
+    "groupCount": 1,
+    "hookCount": 1
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "importedDoc:~/projects/my-app/AGENTS.md",
+   "kind": "importedDoc",
+   "label": "AGENTS.md",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/AGENTS.md",
+   "fileId": "~/projects/my-app/AGENTS.md",
+   "summary": "Pulled into the instructions by an @import, so Claude reads it at launch as if it were part of CLAUDE.md (4 lines).",
+   "data": {
+    "lines": 4,
+    "imports": [
+     {
+      "raw": "docs/architecture.md",
+      "line": 3,
+      "resolved": "~/projects/my-app/docs/architecture.md",
+      "missing": false,
+      "external": false
+     }
+    ]
+   },
+   "stats": {
+    "sizeBytes": 94,
+    "lines": 4
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "importedDoc:~/projects/my-app/docs/architecture.md",
+   "kind": "importedDoc",
+   "label": "architecture.md",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/docs/architecture.md",
+   "fileId": "~/projects/my-app/docs/architecture.md",
+   "summary": "Pulled into the instructions by an @import, so Claude reads it at launch as if it were part of CLAUDE.md (4 lines).",
+   "data": {
+    "lines": 4,
+    "imports": []
+   },
+   "stats": {
+    "sizeBytes": 60,
+    "lines": 4
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "machine:machine",
+   "kind": "machine",
+   "label": "This machine",
+   "scope": "machine",
+   "layer": "config",
+   "summary": "Everything Claude Code reads on this computer.",
+   "data": {}
+  },
+  {
+   "id": "marketplace:~/.claude/plugins/marketplaces/anthropic-marketplace",
+   "kind": "marketplace",
+   "label": "anthropic-marketplace",
+   "scope": "marketplace",
+   "layer": "config",
+   "parentId": "pluginRegistry:~/.claude/plugins",
+   "path": "~/.claude/plugins/marketplaces/anthropic-marketplace",
+   "summary": "Plugin marketplace from GitHub repo anthropics/claude-plugins-official; lists 2 plugins that can be installed.",
+   "data": {
+    "name": "anthropic-marketplace",
+    "source": {
+     "source": "github",
+     "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "~/.claude/plugins/marketplaces/anthropic-marketplace",
+    "catalogCount": 2,
+    "catalog": [
+     {
+      "name": "code-review",
+      "version": "1.2.0",
+      "installed": true
+     },
+     {
+      "name": "deploy-tools",
+      "version": "0.3.0",
+      "installed": false
+     }
+    ],
+    "fromSettings": false
+   }
+  },
+  {
+   "id": "mcpServer:~/.claude.json#filesystem",
+   "kind": "mcpServer",
+   "label": "filesystem",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude.json",
+   "fileId": "~/.claude.json",
+   "summary": "MCP server that runs `npx` locally; available in every project (user scope).",
+   "data": {
+    "scopeKind": "user",
+    "name": "filesystem",
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+     "-y",
+     "@modelcontextprotocol/server-filesystem",
+     "~"
+    ],
+    "envKeys": [],
+    "headerKeys": [],
+    "redactedKeys": [],
+    "placeholders": [],
+    "toolPrefix": "mcp__filesystem__"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "mcpServer:~/.claude.json#~/projects/my-app/local-db",
+   "kind": "mcpServer",
+   "label": "local-db",
+   "scope": "local",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/.claude.json",
+   "fileId": "~/.claude.json",
+   "summary": "MCP server that runs `npx` locally; private to you in this project (local scope).",
+   "data": {
+    "scopeKind": "local",
+    "name": "local-db",
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+     "-y",
+     "db-mcp"
+    ],
+    "envKeys": [],
+    "headerKeys": [],
+    "redactedKeys": [],
+    "placeholders": [],
+    "toolPrefix": "mcp__local-db__"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "mcpServer:~/projects/my-app/.mcp.json#github",
+   "kind": "mcpServer",
+   "label": "github",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/.mcp.json",
+   "fileId": "~/projects/my-app/.mcp.json",
+   "summary": "MCP server that connects to https://api.githubcopilot.com/mcp/; shared with the team through .mcp.json.",
+   "data": {
+    "scopeKind": "project",
+    "name": "github",
+    "transport": "http",
+    "url": "https://api.githubcopilot.com/mcp/",
+    "envKeys": [],
+    "headerKeys": [],
+    "redactedKeys": [],
+    "placeholders": [],
+    "toolPrefix": "mcp__github__",
+    "approval": "enabled"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "memoryFile:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "kind": "memoryFile",
+   "label": "deploy",
+   "scope": "local",
+   "layer": "memory",
+   "parentId": "memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "fileId": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "summary": "Deploy steps (project). Read on demand when MEMORY.md points at it.",
+   "data": {
+    "name": "deploy",
+    "description": "Deploy steps",
+    "type": "project"
+   },
+   "stats": {
+    "sizeBytes": 97,
+    "lines": 8,
+    "lastUsedAt": "2026-10-06T01:52:12.615Z"
+   },
+   "loadTiming": "lazy"
+  },
+  {
+   "id": "memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "kind": "memoryIndex",
+   "label": "MEMORY.md",
+   "scope": "local",
+   "layer": "memory",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "fileId": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "summary": "Claude's own notes about this project: an index of 1 memory (4 lines). The first 200 lines load at the start of every session here.",
+   "data": {
+    "projectPath": "~/projects/my-app",
+    "entries": 1
+   },
+   "stats": {
+    "sizeBytes": 54,
+    "lines": 4,
+    "lastUsedAt": "2026-10-06T01:52:12.614Z"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/.claude/settings.json#allow/Bash(git status)",
+   "kind": "permissionRule",
+   "label": "Bash(git status)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "settings:~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Allowed without asking: Bash calls matching `git status`.",
+   "data": {
+    "list": "allow",
+    "raw": "Bash(git status)",
+    "tool": "Bash",
+    "pattern": "git status",
+    "resolvedTargetId": "tool:builtin#Bash"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/.claude/settings.json#allow/Bash(npm test)",
+   "kind": "permissionRule",
+   "label": "Bash(npm test)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "settings:~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Allowed without asking: Bash calls matching `npm test`.",
+   "data": {
+    "list": "allow",
+    "raw": "Bash(npm test)",
+    "tool": "Bash",
+    "pattern": "npm test",
+    "resolvedTargetId": "tool:builtin#Bash"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/.claude/settings.json#allow/Read",
+   "kind": "permissionRule",
+   "label": "Read",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "settings:~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Allowed without asking: every use of the Read tool.",
+   "data": {
+    "list": "allow",
+    "raw": "Read",
+    "tool": "Read",
+    "resolvedTargetId": "tool:builtin#Read"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/.claude/settings.json#deny/Bash(rm -rf *)",
+   "kind": "permissionRule",
+   "label": "Bash(rm -rf *)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "settings:~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Always blocked: Bash calls matching `rm -rf *`.",
+   "data": {
+    "list": "deny",
+    "raw": "Bash(rm -rf *)",
+    "tool": "Bash",
+    "pattern": "rm -rf *",
+    "resolvedTargetId": "tool:builtin#Bash"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/projects/my-app/.claude/settings.json#allow/Bash(npm run *)",
+   "kind": "permissionRule",
+   "label": "Bash(npm run *)",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "settings:~/projects/my-app/.claude/settings.json",
+   "path": "~/projects/my-app/.claude/settings.json",
+   "fileId": "~/projects/my-app/.claude/settings.json",
+   "summary": "Allowed without asking: Bash calls matching `npm run *`.",
+   "data": {
+    "list": "allow",
+    "raw": "Bash(npm run *)",
+    "tool": "Bash",
+    "pattern": "npm run *",
+    "resolvedTargetId": "tool:builtin#Bash"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "permissionRule:~/projects/my-app/.claude/settings.local.json#allow/Bash(git push *)",
+   "kind": "permissionRule",
+   "label": "Bash(git push *)",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "settings:~/projects/my-app/.claude/settings.local.json",
+   "path": "~/projects/my-app/.claude/settings.local.json",
+   "fileId": "~/projects/my-app/.claude/settings.local.json",
+   "summary": "Allowed without asking: Bash calls matching `git push *`.",
+   "data": {
+    "list": "allow",
+    "raw": "Bash(git push *)",
+    "tool": "Bash",
+    "pattern": "git push *",
+    "resolvedTargetId": "tool:builtin#Bash"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "plan:~/.claude/plans/add-login-page.md",
+   "kind": "plan",
+   "label": "Add login page",
+   "scope": "user",
+   "layer": "plans",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude/plans/add-login-page.md",
+   "fileId": "~/.claude/plans/add-login-page.md",
+   "summary": "Plan written in Plan Mode (5 lines); kept so you can revisit the reasoning behind a change.",
+   "data": {
+    "title": "Add login page",
+    "slug": "add-login-page"
+   },
+   "stats": {
+    "sizeBytes": 37,
+    "lines": 5,
+    "lastUsedAt": "2026-10-06T01:52:12.616Z"
+   },
+   "loadTiming": "never"
+  },
+  {
+   "id": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "kind": "plugin",
+   "label": "code-review",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "pluginRegistry:~/.claude/plugins",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "summary": "Plugin code-review 1.2.0 from marketplace anthropic-marketplace: 3 skills, 1 agents, 1 hook groups. Every skill and agent description it contributes is in context on every turn.",
+   "data": {
+    "id": "code-review@anthropic-marketplace",
+    "name": "code-review",
+    "marketplace": "anthropic-marketplace",
+    "version": "1.2.0",
+    "scope": "user",
+    "installPath": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+    "installPathExists": true,
+    "registry": {
+     "installedAt": "2026-09-15T00:00:00Z",
+     "lastUpdated": "2026-09-15T00:00:00Z"
+    },
+    "counts": {
+     "skills": 3,
+     "agents": 1,
+     "commands": 0,
+     "hookGroups": 1,
+     "mcpServers": 0,
+     "lspServers": 0,
+     "outputStyles": 0
+    },
+    "unloadedDirs": [],
+    "userConfigKeys": [],
+    "heldByPids": [],
+    "orphan": false,
+    "manifest": {
+     "name": "code-review",
+     "version": "1.2.0",
+     "description": "Review helpers",
+     "author": "Example Author",
+     "declaredComponents": []
+    },
+    "enabledInSettings": true
+   },
+   "stats": {
+    "usageCount": 12,
+    "lastUsedAt": "2026-10-01T09:00:00.000Z"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "pluginManifest:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "kind": "pluginManifest",
+   "label": "plugin.json",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "summary": "Manifest declaring the plugin's name, version and where its components live.",
+   "data": {
+    "manifest": {
+     "name": "code-review",
+     "version": "1.2.0",
+     "description": "Review helpers",
+     "author": "Example Author",
+     "declaredComponents": []
+    },
+    "userConfigKeys": []
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "pluginRegistry:~/.claude/plugins",
+   "kind": "pluginRegistry",
+   "label": "Plugins",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "path": "~/.claude/plugins",
+   "summary": "Installed plugins and the marketplaces they came from. A plugin is enabled through enabledPlugins in a settings file.",
+   "data": {}
+  },
+  {
+   "id": "project:~/projects/my-app",
+   "kind": "project",
+   "label": "my-app",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "path": "~/projects/my-app",
+   "summary": "Project folder (Claude Code has run here): 2 CLAUDE.md files, 2 settings files, 1 MCP server, 1 skills/agents/commands. Its config applies only when Claude runs inside it.",
+   "data": {
+    "path": "~/projects/my-app",
+    "exists": true,
+    "isHome": false,
+    "sources": [
+     "claudeJson"
+    ],
+    "registryKeys": [
+     "~/projects/my-app"
+    ],
+    "encodedDirName": "C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app",
+    "effective": {
+     "permissions": {
+      "allow": [
+       {
+        "value": "Read",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       },
+       {
+        "value": "Bash(git status)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       },
+       {
+        "value": "Bash(npm test)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       },
+       {
+        "value": "Bash(npm run *)",
+        "from": "settings:~/projects/my-app/.claude/settings.json",
+        "level": "project"
+       },
+       {
+        "value": "Bash(git push *)",
+        "from": "settings:~/projects/my-app/.claude/settings.local.json",
+        "level": "local"
+       }
+      ],
+      "deny": [
+       {
+        "value": "Bash(rm -rf *)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       }
+      ],
+      "ask": []
+     },
+     "hooks": {
+      "PostToolUse": {
+       "groups": 1,
+       "from": [
+        "settings:~/.claude/settings.json"
+       ]
+      }
+     },
+     "env": {},
+     "enabledPlugins": {
+      "code-review@anthropic-marketplace": {
+       "value": true,
+       "from": "settings:~/.claude/settings.json",
+       "level": "user"
+      }
+     },
+     "model": {
+      "value": "opus",
+      "from": "settings:~/projects/my-app/.claude/settings.local.json",
+      "level": "local"
+     }
+    },
+    "worktreeCount": 0,
+    "sessionCount": 2,
+    "memoryFileCount": 2,
+    "lastCostUSD": 0.42,
+    "lastSessionId": "aaaa0001"
+   },
+   "stats": {
+    "sessionCount": 2,
+    "lastSessionAt": "2026-10-06T01:52:12.615Z"
+   }
+  },
+  {
+   "id": "projectState:~/.claude.json#~/projects/my-app",
+   "kind": "projectState",
+   "label": "state in ~/.claude.json",
+   "scope": "local",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/.claude.json",
+   "fileId": "~/.claude.json",
+   "summary": "What Claude Code remembers about this folder: trusted, 1 local MCP server, 1 approved and 0 rejected .mcp.json servers, last session cost $0.42.",
+   "data": {
+    "allowedTools": [],
+    "enabledMcpjsonServers": [
+     "github"
+    ],
+    "disabledMcpjsonServers": [],
+    "mcpContextUris": [],
+    "localMcpServers": [
+     "local-db"
+    ],
+    "hasTrustDialogAccepted": true,
+    "lastCost": 0.42,
+    "lastSessionId": "aaaa0001"
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "kind": "session",
+   "label": "aaaa0001",
+   "scope": "local",
+   "layer": "sessions",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "fileId": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "summary": "Conversation transcript on branch main (Claude Code 2.1.0). Used by --resume and for rewinds; never read into this graph.",
+   "data": {
+    "sessionId": "aaaa0001-0000-0000-0000-000000000001",
+    "cwd": "~/projects/my-app",
+    "gitBranch": "main",
+    "version": "2.1.0",
+    "firstTimestamp": "2026-10-01T09:00:00.000Z",
+    "subagentCount": 0,
+    "hasToolResults": false
+   },
+   "stats": {
+    "sizeBytes": 178,
+    "lastUsedAt": "2026-10-06T01:52:12.615Z"
+   },
+   "loadTiming": "never"
+  },
+  {
+   "id": "session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "kind": "session",
+   "label": "bbbb0002",
+   "scope": "local",
+   "layer": "sessions",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "fileId": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "summary": "Conversation transcript on branch feature/login (Claude Code 2.1.0). Used by --resume and for rewinds; never read into this graph.",
+   "data": {
+    "sessionId": "bbbb0002-0000-0000-0000-000000000002",
+    "cwd": "~/projects/my-app",
+    "gitBranch": "feature/login",
+    "version": "2.1.0",
+    "firstTimestamp": "2026-10-03T14:00:00.000Z",
+    "subagentCount": 0,
+    "hasToolResults": false
+   },
+   "stats": {
+    "sizeBytes": 187,
+    "lastUsedAt": "2026-10-06T01:52:12.615Z"
+   },
+   "loadTiming": "never"
+  },
+  {
+   "id": "settings:~/.claude/settings.json",
+   "kind": "settings",
+   "label": "settings.json (user)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude/settings.json",
+   "fileId": "~/.claude/settings.json",
+   "summary": "Your personal settings, applied to every project on this machine. Sets 4 permission rules, 1 hook groups, 1 plugin toggles, model sonnet.",
+   "data": {
+    "level": "user",
+    "keys": [
+     "model",
+     "enabledPlugins",
+     "permissions",
+     "hooks"
+    ],
+    "unknownKeys": [],
+    "hookGroups": 1,
+    "model": "sonnet",
+    "enabledPlugins": {
+     "code-review@anthropic-marketplace": true
+    },
+    "hasStatusLine": false,
+    "permissions": {
+     "allow": 3,
+     "deny": 1,
+     "ask": 0
+    }
+   },
+   "stats": {
+    "sizeBytes": 509
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "settings:~/projects/my-app/.claude/settings.json",
+   "kind": "settings",
+   "label": "settings.json (project)",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/.claude/settings.json",
+   "fileId": "~/projects/my-app/.claude/settings.json",
+   "summary": "Shared project settings, usually committed to version control for the whole team. Sets 1 permission rules.",
+   "data": {
+    "level": "project",
+    "keys": [
+     "permissions"
+    ],
+    "unknownKeys": [],
+    "hookGroups": 0,
+    "hasStatusLine": false,
+    "permissions": {
+     "allow": 1,
+     "deny": 0,
+     "ask": 0
+    }
+   },
+   "stats": {
+    "sizeBytes": 71
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "settings:~/projects/my-app/.claude/settings.local.json",
+   "kind": "settings",
+   "label": "settings.local.json (local)",
+   "scope": "project",
+   "layer": "config",
+   "parentId": "project:~/projects/my-app",
+   "path": "~/projects/my-app/.claude/settings.local.json",
+   "fileId": "~/projects/my-app/.claude/settings.local.json",
+   "summary": "Your private overrides for this project only (git-ignored); \"don't ask again\" writes allow rules here. Sets 1 permission rules, model opus.",
+   "data": {
+    "level": "local",
+    "keys": [
+     "permissions",
+     "model"
+    ],
+    "unknownKeys": [],
+    "hookGroups": 0,
+    "model": "opus",
+    "hasStatusLine": false,
+    "permissions": {
+     "allow": 1,
+     "deny": 0,
+     "ask": 0
+    }
+   },
+   "stats": {
+    "sizeBytes": 91
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "kind": "skill",
+   "label": "explain-diff",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "summary": "Explain a diff in plain English. Skill provided by a plugin; You or Claude can invoke it as /code-review:explain-diff.",
+   "data": {
+    "name": "explain-diff",
+    "description": "Explain a diff in plain English.",
+    "invocation": "/code-review:explain-diff",
+    "origin": "plugin",
+    "pluginId": "code-review@anthropic-marketplace",
+    "frontmatter": {
+     "name": "explain-diff",
+     "description": "Explain a diff in plain English."
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 73,
+    "lines": 5
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "kind": "skill",
+   "label": "review-pr",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "summary": "Review a pull request for bugs and style. Skill provided by a plugin; You or Claude can invoke it as /code-review:review-pr.",
+   "data": {
+    "name": "review-pr",
+    "description": "Review a pull request for bugs and style.",
+    "invocation": "/code-review:review-pr",
+    "origin": "plugin",
+    "pluginId": "code-review@anthropic-marketplace",
+    "frontmatter": {
+     "name": "review-pr",
+     "description": "Review a pull request for bugs and style."
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 79,
+    "lines": 5
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "kind": "skill",
+   "label": "security-scan",
+   "scope": "plugin",
+   "layer": "config",
+   "parentId": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "fileId": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "summary": "Look for common security issues. Skill provided by a plugin; You or Claude can invoke it as /code-review:security-scan.",
+   "data": {
+    "name": "security-scan",
+    "description": "Look for common security issues.",
+    "invocation": "/code-review:security-scan",
+    "origin": "plugin",
+    "pluginId": "code-review@anthropic-marketplace",
+    "frontmatter": {
+     "name": "security-scan",
+     "description": "Look for common security issues."
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 74,
+    "lines": 5
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "skill:~/.claude/skills/summarize/SKILL.md",
+   "kind": "skill",
+   "label": "summarize",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "userScope:~/.claude",
+   "path": "~/.claude/skills/summarize/SKILL.md",
+   "fileId": "~/.claude/skills/summarize/SKILL.md",
+   "summary": "Summarize the current changes for a PR description. Skill personal (available in every project); You or Claude can invoke it as /summarize.",
+   "data": {
+    "name": "summarize",
+    "description": "Summarize the current changes for a PR description.",
+    "invocation": "/summarize",
+    "origin": "personal",
+    "frontmatter": {
+     "name": "summarize",
+     "description": "Summarize the current changes for a PR description."
+    },
+    "hasHooks": false
+   },
+   "stats": {
+    "sizeBytes": 124,
+    "lines": 6
+   },
+   "loadTiming": "startup"
+  },
+  {
+   "id": "tool:builtin#Agent",
+   "kind": "tool",
+   "label": "Agent",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Agent tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#AskUserQuestion",
+   "kind": "tool",
+   "label": "AskUserQuestion",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in AskUserQuestion tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Bash",
+   "kind": "tool",
+   "label": "Bash",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Bash tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Edit",
+   "kind": "tool",
+   "label": "Edit",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Edit tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#EnterWorktree",
+   "kind": "tool",
+   "label": "EnterWorktree",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in EnterWorktree tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#ExitPlanMode",
+   "kind": "tool",
+   "label": "ExitPlanMode",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in ExitPlanMode tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#ExitWorktree",
+   "kind": "tool",
+   "label": "ExitWorktree",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in ExitWorktree tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Glob",
+   "kind": "tool",
+   "label": "Glob",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Glob tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Grep",
+   "kind": "tool",
+   "label": "Grep",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Grep tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#LS",
+   "kind": "tool",
+   "label": "LS",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in LS tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Monitor",
+   "kind": "tool",
+   "label": "Monitor",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Monitor tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#MultiEdit",
+   "kind": "tool",
+   "label": "MultiEdit",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in MultiEdit tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#NotebookEdit",
+   "kind": "tool",
+   "label": "NotebookEdit",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in NotebookEdit tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#PowerShell",
+   "kind": "tool",
+   "label": "PowerShell",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in PowerShell tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Read",
+   "kind": "tool",
+   "label": "Read",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Read tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#SendMessage",
+   "kind": "tool",
+   "label": "SendMessage",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in SendMessage tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Skill",
+   "kind": "tool",
+   "label": "Skill",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Skill tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Task",
+   "kind": "tool",
+   "label": "Task",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Task tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#TaskStop",
+   "kind": "tool",
+   "label": "TaskStop",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in TaskStop tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#TodoWrite",
+   "kind": "tool",
+   "label": "TodoWrite",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in TodoWrite tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#WebFetch",
+   "kind": "tool",
+   "label": "WebFetch",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in WebFetch tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#WebSearch",
+   "kind": "tool",
+   "label": "WebSearch",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in WebSearch tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:builtin#Write",
+   "kind": "tool",
+   "label": "Write",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Built-in Write tool.",
+   "data": {
+    "builtin": true
+   }
+  },
+  {
+   "id": "tool:mcp#mcp__claude_ai_Google_Calendar__",
+   "kind": "tool",
+   "label": "mcp__claude_ai_Google_Calendar__*",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Tools from MCP server \"claude.ai Google Calendar\" appear to Claude under this name prefix.",
+   "data": {
+    "builtin": false,
+    "mcp": {
+     "server": "claude.ai Google Calendar",
+     "prefix": "mcp__claude_ai_Google_Calendar__"
+    }
+   }
+  },
+  {
+   "id": "tool:mcp#mcp__filesystem__",
+   "kind": "tool",
+   "label": "mcp__filesystem__*",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Tools from MCP server \"filesystem\" appear to Claude under this name prefix.",
+   "data": {
+    "builtin": false,
+    "mcp": {
+     "server": "filesystem",
+     "prefix": "mcp__filesystem__"
+    }
+   }
+  },
+  {
+   "id": "tool:mcp#mcp__github__",
+   "kind": "tool",
+   "label": "mcp__github__*",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Tools from MCP server \"github\" appear to Claude under this name prefix.",
+   "data": {
+    "builtin": false,
+    "mcp": {
+     "server": "github",
+     "prefix": "mcp__github__"
+    }
+   }
+  },
+  {
+   "id": "tool:mcp#mcp__local-db__",
+   "kind": "tool",
+   "label": "mcp__local-db__*",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "toolset:machine#tools",
+   "summary": "Tools from MCP server \"local-db\" appear to Claude under this name prefix.",
+   "data": {
+    "builtin": false,
+    "mcp": {
+     "server": "local-db",
+     "prefix": "mcp__local-db__"
+    }
+   }
+  },
+  {
+   "id": "toolset:machine#tools",
+   "kind": "toolset",
+   "label": "Tools and events",
+   "scope": "machine",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "summary": "What Claude is allowed to do (tools) and the lifecycle events hooks can attach to.",
+   "data": {}
+  },
+  {
+   "id": "userScope:~/.claude",
+   "kind": "userScope",
+   "label": "You (~/.claude)",
+   "scope": "user",
+   "layer": "config",
+   "parentId": "machine:machine",
+   "path": "~/.claude",
+   "summary": "Your personal Claude Code configuration. Everything here applies to every project on this machine.",
+   "data": {
+    "exists": true,
+    "effective": {
+     "permissions": {
+      "allow": [
+       {
+        "value": "Read",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       },
+       {
+        "value": "Bash(git status)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       },
+       {
+        "value": "Bash(npm test)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       }
+      ],
+      "deny": [
+       {
+        "value": "Bash(rm -rf *)",
+        "from": "settings:~/.claude/settings.json",
+        "level": "user"
+       }
+      ],
+      "ask": []
+     },
+     "hooks": {
+      "PostToolUse": {
+       "groups": 1,
+       "from": [
+        "settings:~/.claude/settings.json"
+       ]
+      }
+     },
+     "env": {},
+     "enabledPlugins": {
+      "code-review@anthropic-marketplace": {
+       "value": true,
+       "from": "settings:~/.claude/settings.json",
+       "level": "user"
+      }
+     },
+     "model": {
+      "value": "sonnet",
+      "from": "settings:~/.claude/settings.json",
+      "level": "user"
+     }
+    }
+   }
+  }
+ ],
+ "edges": [
+  {
+   "kind": "allows",
+   "source": "permissionRule:~/.claude/settings.json#allow/Bash(git status)",
+   "target": "tool:builtin#Bash",
+   "label": "git status",
+   "data": {
+    "rule": "Bash(git status)",
+    "effect": "allow"
+   },
+   "id": "allows:permissionRule:~/.claude/settings.json#allow/Bash(git status)->tool:builtin#Bash"
+  },
+  {
+   "kind": "allows",
+   "source": "permissionRule:~/.claude/settings.json#allow/Bash(npm test)",
+   "target": "tool:builtin#Bash",
+   "label": "npm test",
+   "data": {
+    "rule": "Bash(npm test)",
+    "effect": "allow"
+   },
+   "id": "allows:permissionRule:~/.claude/settings.json#allow/Bash(npm test)->tool:builtin#Bash"
+  },
+  {
+   "kind": "allows",
+   "source": "permissionRule:~/.claude/settings.json#allow/Read",
+   "target": "tool:builtin#Read",
+   "data": {
+    "rule": "Read",
+    "effect": "allow"
+   },
+   "id": "allows:permissionRule:~/.claude/settings.json#allow/Read->tool:builtin#Read"
+  },
+  {
+   "kind": "allows",
+   "source": "permissionRule:~/projects/my-app/.claude/settings.json#allow/Bash(npm run *)",
+   "target": "tool:builtin#Bash",
+   "label": "npm run *",
+   "data": {
+    "rule": "Bash(npm run *)",
+    "effect": "allow"
+   },
+   "id": "allows:permissionRule:~/projects/my-app/.claude/settings.json#allow/Bash(npm run *)->tool:builtin#Bash"
+  },
+  {
+   "kind": "allows",
+   "source": "permissionRule:~/projects/my-app/.claude/settings.local.json#allow/Bash(git push *)",
+   "target": "tool:builtin#Bash",
+   "label": "git push *",
+   "data": {
+    "rule": "Bash(git push *)",
+    "effect": "allow"
+   },
+   "id": "allows:permissionRule:~/projects/my-app/.claude/settings.local.json#allow/Bash(git push *)->tool:builtin#Bash"
+  },
+  {
+   "kind": "approves",
+   "source": "projectState:~/.claude.json#~/projects/my-app",
+   "target": "mcpServer:~/projects/my-app/.mcp.json#github",
+   "label": "approved",
+   "id": "approves:projectState:~/.claude.json#~/projects/my-app->mcpServer:~/projects/my-app/.mcp.json#github"
+  },
+  {
+   "kind": "contains",
+   "source": "cloudConnectors:cloud#connectors",
+   "target": "connector:cloud#Google_Calendar",
+   "id": "contains:cloudConnectors:cloud#connectors->connector:cloud#Google_Calendar"
+  },
+  {
+   "kind": "contains",
+   "source": "hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0",
+   "target": "hook:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0/0",
+   "id": "contains:hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0->hook:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0/0"
+  },
+  {
+   "kind": "contains",
+   "source": "hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0",
+   "target": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "id": "contains:hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0->hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0"
+  },
+  {
+   "kind": "contains",
+   "source": "hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "target": "hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0",
+   "id": "contains:hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json->hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "claudeMd:C:/Users/Sam/.claude/CLAUDE.md",
+   "id": "contains:machine:machine->claudeMd:C:/Users/Sam/.claude/CLAUDE.md"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "cloudConnectors:cloud#connectors",
+   "id": "contains:machine:machine->cloudConnectors:cloud#connectors"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "pluginRegistry:~/.claude/plugins",
+   "id": "contains:machine:machine->pluginRegistry:~/.claude/plugins"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "project:~/projects/my-app",
+   "id": "contains:machine:machine->project:~/projects/my-app"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "toolset:machine#tools",
+   "id": "contains:machine:machine->toolset:machine#tools"
+  },
+  {
+   "kind": "contains",
+   "source": "machine:machine",
+   "target": "userScope:~/.claude",
+   "id": "contains:machine:machine->userScope:~/.claude"
+  },
+  {
+   "kind": "contains",
+   "source": "memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "target": "memoryFile:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "id": "contains:memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md->memoryFile:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "agent:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->agent:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->hooksFile:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "pluginManifest:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->pluginManifest:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md"
+  },
+  {
+   "kind": "contains",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "id": "contains:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->skill:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md"
+  },
+  {
+   "kind": "contains",
+   "source": "pluginRegistry:~/.claude/plugins",
+   "target": "marketplace:~/.claude/plugins/marketplaces/anthropic-marketplace",
+   "id": "contains:pluginRegistry:~/.claude/plugins->marketplace:~/.claude/plugins/marketplaces/anthropic-marketplace"
+  },
+  {
+   "kind": "contains",
+   "source": "pluginRegistry:~/.claude/plugins",
+   "target": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "id": "contains:pluginRegistry:~/.claude/plugins->plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "agent:~/projects/my-app/.claude/agents/tester.md",
+   "id": "contains:project:~/projects/my-app->agent:~/projects/my-app/.claude/agents/tester.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "claudeMd:~/projects/my-app/CLAUDE.md",
+   "id": "contains:project:~/projects/my-app->claudeMd:~/projects/my-app/CLAUDE.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "claudeMd:~/projects/my-app/src/api/CLAUDE.md",
+   "id": "contains:project:~/projects/my-app->claudeMd:~/projects/my-app/src/api/CLAUDE.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "importedDoc:~/projects/my-app/AGENTS.md",
+   "id": "contains:project:~/projects/my-app->importedDoc:~/projects/my-app/AGENTS.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "importedDoc:~/projects/my-app/docs/architecture.md",
+   "id": "contains:project:~/projects/my-app->importedDoc:~/projects/my-app/docs/architecture.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "mcpServer:~/.claude.json#~/projects/my-app/local-db",
+   "id": "contains:project:~/projects/my-app->mcpServer:~/.claude.json#~/projects/my-app/local-db"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "mcpServer:~/projects/my-app/.mcp.json#github",
+   "id": "contains:project:~/projects/my-app->mcpServer:~/projects/my-app/.mcp.json#github"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "id": "contains:project:~/projects/my-app->memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "projectState:~/.claude.json#~/projects/my-app",
+   "id": "contains:project:~/projects/my-app->projectState:~/.claude.json#~/projects/my-app"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "id": "contains:project:~/projects/my-app->session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "id": "contains:project:~/projects/my-app->session:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "settings:~/projects/my-app/.claude/settings.json",
+   "id": "contains:project:~/projects/my-app->settings:~/projects/my-app/.claude/settings.json"
+  },
+  {
+   "kind": "contains",
+   "source": "project:~/projects/my-app",
+   "target": "settings:~/projects/my-app/.claude/settings.local.json",
+   "id": "contains:project:~/projects/my-app->settings:~/projects/my-app/.claude/settings.local.json"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/.claude/settings.json",
+   "target": "hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0",
+   "id": "contains:settings:~/.claude/settings.json->hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/.claude/settings.json",
+   "target": "permissionRule:~/.claude/settings.json#allow/Bash(git status)",
+   "id": "contains:settings:~/.claude/settings.json->permissionRule:~/.claude/settings.json#allow/Bash(git status)"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/.claude/settings.json",
+   "target": "permissionRule:~/.claude/settings.json#allow/Bash(npm test)",
+   "id": "contains:settings:~/.claude/settings.json->permissionRule:~/.claude/settings.json#allow/Bash(npm test)"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/.claude/settings.json",
+   "target": "permissionRule:~/.claude/settings.json#allow/Read",
+   "id": "contains:settings:~/.claude/settings.json->permissionRule:~/.claude/settings.json#allow/Read"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/.claude/settings.json",
+   "target": "permissionRule:~/.claude/settings.json#deny/Bash(rm -rf *)",
+   "id": "contains:settings:~/.claude/settings.json->permissionRule:~/.claude/settings.json#deny/Bash(rm -rf *)"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/projects/my-app/.claude/settings.json",
+   "target": "permissionRule:~/projects/my-app/.claude/settings.json#allow/Bash(npm run *)",
+   "id": "contains:settings:~/projects/my-app/.claude/settings.json->permissionRule:~/projects/my-app/.claude/settings.json#allow/Bash(npm run *)"
+  },
+  {
+   "kind": "contains",
+   "source": "settings:~/projects/my-app/.claude/settings.local.json",
+   "target": "permissionRule:~/projects/my-app/.claude/settings.local.json#allow/Bash(git push *)",
+   "id": "contains:settings:~/projects/my-app/.claude/settings.local.json->permissionRule:~/projects/my-app/.claude/settings.local.json#allow/Bash(git push *)"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "hookEvent:machine#PostToolUse",
+   "id": "contains:toolset:machine#tools->hookEvent:machine#PostToolUse"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "hookEvent:machine#PreToolUse",
+   "id": "contains:toolset:machine#tools->hookEvent:machine#PreToolUse"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Agent",
+   "id": "contains:toolset:machine#tools->tool:builtin#Agent"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#AskUserQuestion",
+   "id": "contains:toolset:machine#tools->tool:builtin#AskUserQuestion"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Bash",
+   "id": "contains:toolset:machine#tools->tool:builtin#Bash"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Edit",
+   "id": "contains:toolset:machine#tools->tool:builtin#Edit"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#EnterWorktree",
+   "id": "contains:toolset:machine#tools->tool:builtin#EnterWorktree"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#ExitPlanMode",
+   "id": "contains:toolset:machine#tools->tool:builtin#ExitPlanMode"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#ExitWorktree",
+   "id": "contains:toolset:machine#tools->tool:builtin#ExitWorktree"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Glob",
+   "id": "contains:toolset:machine#tools->tool:builtin#Glob"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Grep",
+   "id": "contains:toolset:machine#tools->tool:builtin#Grep"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#LS",
+   "id": "contains:toolset:machine#tools->tool:builtin#LS"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Monitor",
+   "id": "contains:toolset:machine#tools->tool:builtin#Monitor"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#MultiEdit",
+   "id": "contains:toolset:machine#tools->tool:builtin#MultiEdit"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#NotebookEdit",
+   "id": "contains:toolset:machine#tools->tool:builtin#NotebookEdit"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#PowerShell",
+   "id": "contains:toolset:machine#tools->tool:builtin#PowerShell"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Read",
+   "id": "contains:toolset:machine#tools->tool:builtin#Read"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#SendMessage",
+   "id": "contains:toolset:machine#tools->tool:builtin#SendMessage"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Skill",
+   "id": "contains:toolset:machine#tools->tool:builtin#Skill"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Task",
+   "id": "contains:toolset:machine#tools->tool:builtin#Task"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#TaskStop",
+   "id": "contains:toolset:machine#tools->tool:builtin#TaskStop"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#TodoWrite",
+   "id": "contains:toolset:machine#tools->tool:builtin#TodoWrite"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#WebFetch",
+   "id": "contains:toolset:machine#tools->tool:builtin#WebFetch"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#WebSearch",
+   "id": "contains:toolset:machine#tools->tool:builtin#WebSearch"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:builtin#Write",
+   "id": "contains:toolset:machine#tools->tool:builtin#Write"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:mcp#mcp__claude_ai_Google_Calendar__",
+   "id": "contains:toolset:machine#tools->tool:mcp#mcp__claude_ai_Google_Calendar__"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:mcp#mcp__filesystem__",
+   "id": "contains:toolset:machine#tools->tool:mcp#mcp__filesystem__"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:mcp#mcp__github__",
+   "id": "contains:toolset:machine#tools->tool:mcp#mcp__github__"
+  },
+  {
+   "kind": "contains",
+   "source": "toolset:machine#tools",
+   "target": "tool:mcp#mcp__local-db__",
+   "id": "contains:toolset:machine#tools->tool:mcp#mcp__local-db__"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "claudeJson:~/.claude.json",
+   "id": "contains:userScope:~/.claude->claudeJson:~/.claude.json"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "claudeMd:~/.claude/CLAUDE.md",
+   "id": "contains:userScope:~/.claude->claudeMd:~/.claude/CLAUDE.md"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "credentials:~/.claude/.credentials.json",
+   "id": "contains:userScope:~/.claude->credentials:~/.claude/.credentials.json"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "mcpServer:~/.claude.json#filesystem",
+   "id": "contains:userScope:~/.claude->mcpServer:~/.claude.json#filesystem"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "plan:~/.claude/plans/add-login-page.md",
+   "id": "contains:userScope:~/.claude->plan:~/.claude/plans/add-login-page.md"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "settings:~/.claude/settings.json",
+   "id": "contains:userScope:~/.claude->settings:~/.claude/settings.json"
+  },
+  {
+   "kind": "contains",
+   "source": "userScope:~/.claude",
+   "target": "skill:~/.claude/skills/summarize/SKILL.md",
+   "id": "contains:userScope:~/.claude->skill:~/.claude/skills/summarize/SKILL.md"
+  },
+  {
+   "kind": "denies",
+   "source": "permissionRule:~/.claude/settings.json#deny/Bash(rm -rf *)",
+   "target": "tool:builtin#Bash",
+   "label": "rm -rf *",
+   "data": {
+    "rule": "Bash(rm -rf *)",
+    "effect": "deny"
+   },
+   "id": "denies:permissionRule:~/.claude/settings.json#deny/Bash(rm -rf *)->tool:builtin#Bash"
+  },
+  {
+   "kind": "enables",
+   "source": "settings:~/.claude/settings.json",
+   "target": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "label": "enabledPlugins",
+   "data": {
+    "key": "enabledPlugins.code-review@anthropic-marketplace"
+   },
+   "id": "enables:settings:~/.claude/settings.json->plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0"
+  },
+  {
+   "kind": "imports",
+   "source": "claudeMd:~/projects/my-app/CLAUDE.md",
+   "target": "importedDoc:~/projects/my-app/AGENTS.md",
+   "label": "@AGENTS.md",
+   "data": {
+    "depth": 1,
+    "external": false,
+    "depthExceeded": false
+   },
+   "id": "imports:claudeMd:~/projects/my-app/CLAUDE.md->importedDoc:~/projects/my-app/AGENTS.md"
+  },
+  {
+   "kind": "imports",
+   "source": "importedDoc:~/projects/my-app/AGENTS.md",
+   "target": "importedDoc:~/projects/my-app/docs/architecture.md",
+   "label": "@docs/architecture.md",
+   "data": {
+    "depth": 2,
+    "external": false,
+    "depthExceeded": false
+   },
+   "id": "imports:importedDoc:~/projects/my-app/AGENTS.md->importedDoc:~/projects/my-app/docs/architecture.md"
+  },
+  {
+   "kind": "installedFrom",
+   "source": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "target": "marketplace:~/.claude/plugins/marketplaces/anthropic-marketplace",
+   "id": "installedFrom:plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0->marketplace:~/.claude/plugins/marketplaces/anthropic-marketplace"
+  },
+  {
+   "kind": "loadsAtStartup",
+   "source": "project:~/projects/my-app",
+   "target": "claudeMd:C:/Users/Sam/.claude/CLAUDE.md",
+   "label": "parent folder",
+   "data": {
+    "reason": "CLAUDE.md files in parent folders load at launch"
+   },
+   "id": "loadsAtStartup:project:~/projects/my-app->claudeMd:C:/Users/Sam/.claude/CLAUDE.md"
+  },
+  {
+   "kind": "loadsLazily",
+   "source": "project:~/projects/my-app",
+   "target": "claudeMd:~/projects/my-app/src/api/CLAUDE.md",
+   "label": "subfolder",
+   "data": {
+    "reason": "loaded only when Claude reads files in that folder"
+   },
+   "id": "loadsLazily:project:~/projects/my-app->claudeMd:~/projects/my-app/src/api/CLAUDE.md"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0/0",
+   "target": "tool:builtin#Bash",
+   "label": "Bash",
+   "data": {
+    "matcher": "Bash",
+    "via": "exact"
+   },
+   "id": "matches:hook:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0/0->tool:builtin#Bash"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "target": "tool:builtin#Edit",
+   "label": "Edit|Write",
+   "data": {
+    "matcher": "Edit|Write",
+    "via": "regex"
+   },
+   "id": "matches:hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0->tool:builtin#Edit"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "target": "tool:builtin#MultiEdit",
+   "label": "Edit|Write",
+   "data": {
+    "matcher": "Edit|Write",
+    "via": "regex"
+   },
+   "id": "matches:hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0->tool:builtin#MultiEdit"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "target": "tool:builtin#NotebookEdit",
+   "label": "Edit|Write",
+   "data": {
+    "matcher": "Edit|Write",
+    "via": "regex"
+   },
+   "id": "matches:hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0->tool:builtin#NotebookEdit"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "target": "tool:builtin#TodoWrite",
+   "label": "Edit|Write",
+   "data": {
+    "matcher": "Edit|Write",
+    "via": "regex"
+   },
+   "id": "matches:hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0->tool:builtin#TodoWrite"
+  },
+  {
+   "kind": "matches",
+   "source": "hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0",
+   "target": "tool:builtin#Write",
+   "label": "Edit|Write",
+   "data": {
+    "matcher": "Edit|Write",
+    "via": "regex"
+   },
+   "id": "matches:hook:~/.claude/settings.json#PostToolUse/Edit|Write/0/0->tool:builtin#Write"
+  },
+  {
+   "kind": "overrides",
+   "source": "settings:~/projects/my-app/.claude/settings.json",
+   "target": "settings:~/.claude/settings.json",
+   "label": "overrides",
+   "data": {
+    "reason": "project settings win over user settings for the same key"
+   },
+   "id": "overrides:settings:~/projects/my-app/.claude/settings.json->settings:~/.claude/settings.json"
+  },
+  {
+   "kind": "overrides",
+   "source": "settings:~/projects/my-app/.claude/settings.local.json",
+   "target": "settings:~/projects/my-app/.claude/settings.json",
+   "label": "overrides",
+   "data": {
+    "reason": "local settings win over project settings for the same key"
+   },
+   "id": "overrides:settings:~/projects/my-app/.claude/settings.local.json->settings:~/projects/my-app/.claude/settings.json"
+  },
+  {
+   "kind": "recordsUsage",
+   "source": "claudeJson:~/.claude.json",
+   "target": "plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0",
+   "data": {
+    "usageCount": 12,
+    "lastUsedAt": "2026-10-01T09:00:00.000Z"
+   },
+   "id": "recordsUsage:claudeJson:~/.claude.json->plugin:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0"
+  },
+  {
+   "kind": "remembers",
+   "source": "project:~/projects/my-app",
+   "target": "memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "label": "auto memory",
+   "id": "remembers:project:~/projects/my-app->memoryIndex:~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md"
+  },
+  {
+   "kind": "surfacesAs",
+   "source": "connector:cloud#Google_Calendar",
+   "target": "tool:mcp#mcp__claude_ai_Google_Calendar__",
+   "label": "mcp__claude_ai_Google_Calendar__",
+   "id": "surfacesAs:connector:cloud#Google_Calendar->tool:mcp#mcp__claude_ai_Google_Calendar__"
+  },
+  {
+   "kind": "surfacesAs",
+   "source": "mcpServer:~/.claude.json#filesystem",
+   "target": "tool:mcp#mcp__filesystem__",
+   "label": "mcp__filesystem__",
+   "id": "surfacesAs:mcpServer:~/.claude.json#filesystem->tool:mcp#mcp__filesystem__"
+  },
+  {
+   "kind": "surfacesAs",
+   "source": "mcpServer:~/.claude.json#~/projects/my-app/local-db",
+   "target": "tool:mcp#mcp__local-db__",
+   "label": "mcp__local-db__",
+   "id": "surfacesAs:mcpServer:~/.claude.json#~/projects/my-app/local-db->tool:mcp#mcp__local-db__"
+  },
+  {
+   "kind": "surfacesAs",
+   "source": "mcpServer:~/projects/my-app/.mcp.json#github",
+   "target": "tool:mcp#mcp__github__",
+   "label": "mcp__github__",
+   "id": "surfacesAs:mcpServer:~/projects/my-app/.mcp.json#github->tool:mcp#mcp__github__"
+  },
+  {
+   "kind": "triggers",
+   "source": "hookEvent:machine#PostToolUse",
+   "target": "hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0",
+   "label": "Edit|Write",
+   "id": "triggers:hookEvent:machine#PostToolUse->hookGroup:~/.claude/settings.json#PostToolUse/Edit|Write/0"
+  },
+  {
+   "kind": "triggers",
+   "source": "hookEvent:machine#PreToolUse",
+   "target": "hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0",
+   "label": "Bash",
+   "id": "triggers:hookEvent:machine#PreToolUse->hookGroup:~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json#PreToolUse/Bash/0"
+  }
+ ],
+ "files": {
+  "~/.claude/settings.json": {
+   "id": "~/.claude/settings.json",
+   "path": "~/.claude/settings.json",
+   "size": 509,
+   "mtimeMs": 1791251532598.095,
+   "kind": "json",
+   "sha1": "358244190d8f82742ceefbffb24f0eaf62bcb075",
+   "content": "{\n  \"model\": \"sonnet\",\n  \"enabledPlugins\": {\n    \"code-review@anthropic-marketplace\": true\n  },\n  \"permissions\": {\n    \"allow\": [\n      \"Read\",\n      \"Bash(git status)\",\n      \"Bash(npm test)\"\n    ],\n    \"deny\": [\n      \"Bash(rm -rf *)\"\n    ]\n  },\n  \"hooks\": {\n    \"PostToolUse\": [\n      {\n        \"matcher\": \"Edit|Write\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"npx prettier --write \\\"$FILE\\\"\",\n            \"timeout\": 20\n          }\n        ]\n      }\n    ]\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/.claude/CLAUDE.md": {
+   "id": "~/.claude/CLAUDE.md",
+   "path": "~/.claude/CLAUDE.md",
+   "size": 61,
+   "mtimeMs": 1791251532598.5994,
+   "kind": "markdown",
+   "content": "# My preferences\n\n- Prefer TypeScript.\n- Keep commits small.\n",
+   "sha1": "b900813d36faea948d63909630c9cd6db52d6dc0"
+  },
+  "~/.claude/skills/summarize/SKILL.md": {
+   "id": "~/.claude/skills/summarize/SKILL.md",
+   "path": "~/.claude/skills/summarize/SKILL.md",
+   "size": 124,
+   "mtimeMs": 1791251532600.6074,
+   "kind": "markdown",
+   "excerpt": "---\nname: summarize\ndescription: Summarize the current changes for a PR description.\n---\nRead the diff and write a summary.\n"
+  },
+  "~/.claude.json": {
+   "id": "~/.claude.json",
+   "path": "~/.claude.json",
+   "size": 902,
+   "mtimeMs": 1791251532599.6023,
+   "kind": "json"
+  },
+  "~/.claude/plugins/installed_plugins.json": {
+   "id": "~/.claude/plugins/installed_plugins.json",
+   "path": "~/.claude/plugins/installed_plugins.json",
+   "size": 397,
+   "mtimeMs": 1791251532601.1133,
+   "kind": "json",
+   "sha1": "9fdb00ca0d2a984d25311b34f27123c9f9dfeacd",
+   "content": "{\n  \"version\": 2,\n  \"plugins\": {\n    \"code-review@anthropic-marketplace\": [\n      {\n        \"scope\": \"user\",\n        \"installPath\": \"~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0\",\n        \"version\": \"1.2.0\",\n        \"installedAt\": \"2026-09-15T00:00:00Z\",\n        \"lastUpdated\": \"2026-09-15T00:00:00Z\"\n      }\n    ]\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/.claude/plugins/known_marketplaces.json": {
+   "id": "~/.claude/plugins/known_marketplaces.json",
+   "path": "~/.claude/plugins/known_marketplaces.json",
+   "size": 272,
+   "mtimeMs": 1791251532601.6128,
+   "kind": "json",
+   "sha1": "9a814aa6c4382d3f81b069d6ca3dbeb57ef7f99f",
+   "content": "{\n  \"anthropic-marketplace\": {\n    \"source\": {\n      \"source\": \"github\",\n      \"repo\": \"anthropics/claude-plugins-official\"\n    },\n    \"installLocation\": \"~/.claude/plugins/marketplaces/anthropic-marketplace\"\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/.claude/plugins/marketplaces/anthropic-marketplace/.claude-plugin/marketplace.json": {
+   "id": "~/.claude/plugins/marketplaces/anthropic-marketplace/.claude-plugin/marketplace.json",
+   "path": "~/.claude/plugins/marketplaces/anthropic-marketplace/.claude-plugin/marketplace.json",
+   "size": 191,
+   "mtimeMs": 1791251532602.6106,
+   "kind": "json",
+   "sha1": "e9023c82cb990a29124f6671b5da8d841152ab45"
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/.claude-plugin/plugin.json",
+   "size": 132,
+   "mtimeMs": 1791251532604.6108,
+   "kind": "json",
+   "sha1": "8bf9f9a2c2857b0e1713a9716a6347211981f493",
+   "content": "{\n  \"name\": \"code-review\",\n  \"version\": \"1.2.0\",\n  \"description\": \"Review helpers\",\n  \"author\": {\n    \"name\": \"Example Author\"\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/explain-diff/SKILL.md",
+   "size": 73,
+   "mtimeMs": 1791251532607.1118,
+   "kind": "markdown",
+   "excerpt": "---\nname: explain-diff\ndescription: Explain a diff in plain English.\n---\n"
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/review-pr/SKILL.md",
+   "size": 79,
+   "mtimeMs": 1791251532605.6108,
+   "kind": "markdown",
+   "excerpt": "---\nname: review-pr\ndescription: Review a pull request for bugs and style.\n---\n"
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/skills/security-scan/SKILL.md",
+   "size": 74,
+   "mtimeMs": 1791251532606.1125,
+   "kind": "markdown",
+   "excerpt": "---\nname: security-scan\ndescription: Look for common security issues.\n---\n"
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/agents/reviewer.md",
+   "size": 117,
+   "mtimeMs": 1791251532607.6108,
+   "kind": "markdown",
+   "excerpt": "---\nname: reviewer\ndescription: A careful code reviewer.\ntools: Read, Grep, Glob\nmodel: sonnet\n---\nReview carefully.\n"
+  },
+  "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json": {
+   "id": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "path": "~/.claude/plugins/cache/anthropic-marketplace/code-review/1.2.0/hooks/hooks.json",
+   "size": 220,
+   "mtimeMs": 1791251532608.1108,
+   "kind": "json",
+   "sha1": "ca2adeecadbfe127f04c780ed0479bc14be40199",
+   "content": "{\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"matcher\": \"Bash\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"node scripts/guard.js\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/projects/my-app/.claude/settings.json": {
+   "id": "~/projects/my-app/.claude/settings.json",
+   "path": "~/projects/my-app/.claude/settings.json",
+   "size": 71,
+   "mtimeMs": 1791251532610.1106,
+   "kind": "json",
+   "sha1": "70d1847f5c61090540fd8a1ae261e64711080876",
+   "content": "{\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(npm run *)\"\n    ]\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/projects/my-app/.claude/settings.local.json": {
+   "id": "~/projects/my-app/.claude/settings.local.json",
+   "path": "~/projects/my-app/.claude/settings.local.json",
+   "size": 91,
+   "mtimeMs": 1791251532610.6104,
+   "kind": "json",
+   "sha1": "1fa3db2d1498262a2755b17f0449e6e783b2fb9e",
+   "content": "{\n  \"permissions\": {\n    \"allow\": [\n      \"Bash(git push *)\"\n    ]\n  },\n  \"model\": \"opus\"\n}",
+   "contentIsNormalized": true
+  },
+  "~/projects/my-app/CLAUDE.md": {
+   "id": "~/projects/my-app/CLAUDE.md",
+   "path": "~/projects/my-app/CLAUDE.md",
+   "size": 11,
+   "mtimeMs": 1791251532608.611,
+   "kind": "markdown",
+   "content": "@AGENTS.md\n",
+   "sha1": "c140473a3a5fbe89301c99d9d0d1b76c5971f2c3"
+  },
+  "~/projects/my-app/AGENTS.md": {
+   "id": "~/projects/my-app/AGENTS.md",
+   "path": "~/projects/my-app/AGENTS.md",
+   "size": 94,
+   "mtimeMs": 1791251532609.1116,
+   "kind": "markdown",
+   "content": "# My App\n\nRun `npm test` before committing. Architecture notes live in @docs/architecture.md.\n"
+  },
+  "~/projects/my-app/docs/architecture.md": {
+   "id": "~/projects/my-app/docs/architecture.md",
+   "path": "~/projects/my-app/docs/architecture.md",
+   "size": 60,
+   "mtimeMs": 1791251532609.6108,
+   "kind": "markdown",
+   "content": "# Architecture\n\nA small Express API with a React front end.\n"
+  },
+  "C:/Users/Sam/.claude/CLAUDE.md": {
+   "id": "C:/Users/Sam/.claude/CLAUDE.md",
+   "path": "C:/Users/Sam/.claude/CLAUDE.md",
+   "size": 819,
+   "mtimeMs": 1777771964921.6487,
+   "kind": "markdown",
+   "content": "# Personal Preferences\n\n## General principles\n\n- Prefer single source of truth — avoid duplicating instructions or config across memory files, CLAUDE.md, and settings to prevent unexpected behavior.\n\n\n## New Task workflow\n\nWhen a prompt begins with **\"New Task:\"** or **\"new-task\"**, treat it as a scoped feature addition, feature change, or bug fix.\n\n- Summarize the ask in 2–3 concise bullet points\n- Flag any ambiguity and ask for clarification if needed\n- Wait for confirmation before writing any code\n\n## Quick Task workflow\n\nWhen a prompt begins with **\"quick-task\"**, treat it as a small, focused change.\n\n- Still confirm the right approach before coding — don't just take the fastest path\n- Avoid spaghetti code; prefer idiomatic, clean solutions\n- Keep the confirmation brief (1–2 lines), then proceed\n",
+   "sha1": "87e8d6bee21ec067bb3e6c079cacb59b5e37b285"
+  },
+  "~/projects/my-app/src/api/CLAUDE.md": {
+   "id": "~/projects/my-app/src/api/CLAUDE.md",
+   "path": "~/projects/my-app/src/api/CLAUDE.md",
+   "size": 41,
+   "mtimeMs": 1791251532612.6133,
+   "kind": "markdown",
+   "content": "# API conventions\n\nValidate every input.\n",
+   "sha1": "72bee967969da2049cd32927cf842091343ba1e1"
+  },
+  "~/projects/my-app/.claude/agents/tester.md": {
+   "id": "~/projects/my-app/.claude/agents/tester.md",
+   "path": "~/projects/my-app/.claude/agents/tester.md",
+   "size": 57,
+   "mtimeMs": 1791251532611.611,
+   "kind": "markdown",
+   "excerpt": "---\nname: tester\ndescription: Writes and runs tests.\n---\n"
+  },
+  "~/projects/my-app/.mcp.json": {
+   "id": "~/projects/my-app/.mcp.json",
+   "path": "~/projects/my-app/.mcp.json",
+   "size": 119,
+   "mtimeMs": 1791251532612.1133,
+   "kind": "json",
+   "sha1": "e12d59a2482b1cb6a81be71574065425fde8eb57",
+   "content": "{\n  \"mcpServers\": {\n    \"github\": {\n      \"type\": \"http\",\n      \"url\": \"https://api.githubcopilot.com/mcp/\"\n    }\n  }\n}",
+   "contentIsNormalized": true
+  },
+  "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md": {
+   "id": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/MEMORY.md",
+   "size": 54,
+   "mtimeMs": 1791251532614.111,
+   "kind": "markdown",
+   "content": "# Memory\n\n- [Deploy steps](deploy.md) — how we ship\n"
+  },
+  "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md": {
+   "id": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/memory/deploy.md",
+   "size": 97,
+   "mtimeMs": 1791251532615.112,
+   "kind": "markdown",
+   "excerpt": "---\nname: deploy\ndescription: Deploy steps\nmetadata:\n  type: project\n---\nRun the release script.\n"
+  },
+  "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl": {
+   "id": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/aaaa0001-0000-0000-0000-000000000001.jsonl",
+   "size": 178,
+   "mtimeMs": 1791251532615.6128,
+   "kind": "jsonl"
+  },
+  "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl": {
+   "id": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "path": "~/.claude/projects/C--Users-Sam-AppData-Local-Temp-claude-mri-demo-fVBes9-home-projects-my-app/bbbb0002-0000-0000-0000-000000000002.jsonl",
+   "size": 187,
+   "mtimeMs": 1791251532615.6128,
+   "kind": "jsonl"
+  },
+  "~/.claude/plans/add-login-page.md": {
+   "id": "~/.claude/plans/add-login-page.md",
+   "path": "~/.claude/plans/add-login-page.md",
+   "size": 37,
+   "mtimeMs": 1791251532616.6172,
+   "kind": "markdown",
+   "content": "# Add login page\n\n1. Form\n2. Session\n"
+  }
+ },
+ "warnings": []
+}
