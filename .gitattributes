@@ -1,0 +1,4 @@
+# Keep LF in the repo on every platform; Windows checkouts still work with LF.
+* text=auto eol=lf
+*.png binary
+*.svg text
